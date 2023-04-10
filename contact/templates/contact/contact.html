@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %} {% load static %} {% block main %}
+
+<form action="" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <legend class="title-contact">Contacto</legend>
+    <div class="content-labels">
+      <div class="content-label">
+        <label class="label-input" for="nombreApellido"> Nombre y Apellido </label>
+        {{form.fullname}} {{form.fullname.error}}
+      </div>
+
+      <div class="content-label">
+        <label class='label-input' for="email"> Email </label>
+        {{form.email}} {{form.email.error}}
+      </div>
+
+      <div class="content-label">
+        <label class='label-input' for="telefono"> Teléfono </label>
+        {{form.phone}} {{form.phone.error}}
+      </div>
+
+      <div class="content-label">
+        <label class='label-input' for="mensaje"> Mensaje </label>
+        {{form.message}} {{form.message.error}}
+      </div>
+    </div>
+    <input class="send_buttom" type="submit" value="Enviar formulario" {% if 'ok' in request.GET %}disabled{% endif %} {% if 'error' in request.GET%}disabled{% endif %}/>
+    
+  </fieldset>
+  <div id="lottie-contact"></div>
+</form>
+
+<div class="warning-message">
+  {% if 'ok' in request.GET %}
+  <div class="alert-success" role="alert">
+    <strong>Se envió el formulario con éxito!</strong>
+  </div>
+  {% endif %} {% if 'error' in request.GET %}
+  <div class="alert-error" role="alert">
+    <strong
+      >No se pudo enviar el formulario correctamente, por favor intente nuevamente
+      más tarde</strong
+    >
+  </div>
+  {% endif %}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+<script>
+  var animationContainer = document.getElementById("lottie-contact");
+  var animation = bodymovin.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "{% static 'core/json/robot_contact.json' %}",
+  });
+</script>
+
+{% endblock %}

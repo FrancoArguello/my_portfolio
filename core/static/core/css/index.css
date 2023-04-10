@@ -1,0 +1,129 @@
+.content-index{
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;  
+    justify-content: center;  
+    height: 70vh;
+}
+
+
+.I-am{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+.my_name{
+    font-size: 2em;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.content-name-function{
+    text-align:left;
+    margin-bottom: 100px;
+}
+
+.name{
+    animation: animation 3s steps(35), transparent .5s step-end infinite alternate;
+    width: 7.1em;
+    height: 1.2em;
+    white-space: nowrap;
+    overflow: hidden ;
+    font-size: 6em;
+    color: white;
+    border-right: 5px solid rgb(50, 3, 50);
+}
+
+
+.function{
+    display: flex;
+    font-size: 2.5em;
+    color: white;
+    
+}
+
+.items{
+    position: absolute;
+    animation: roll 8s ease 1s infinite backwards;
+}
+.items:nth-child(1){
+    animation-delay:0s ;
+    opacity: 0;    
+}
+.items:nth-child(2){
+    animation-delay:2s ;
+    opacity: 0;    
+}
+.items:nth-child(3){
+    animation-delay:4s ;
+    opacity: 0;    
+}
+.items:nth-child(4){
+    animation-delay:6s ;
+    opacity: 0;    
+}
+/**
+.function{
+    animation: animation 2s steps(35), transparent .5s step-end infinite alternate;
+    width: 9.3em;
+    white-space: nowrap;
+    overflow: hidden ;
+    font-size: 2.5em;
+    color: white;
+    border-right: 3px solid rgb(50, 3, 50) ;
+}
+**/
+
+#lottie-index {
+    width: 500px ;
+    animation: aparecer 1.5s ease-in-out;    
+}
+
+
+#photo{
+    width: 460px;
+    border-radius: 3000px;
+    animation: aparecer 1s ease-in-out;
+    opacity: 0.8
+}
+
+
+@keyframes animation{
+    from {
+        width:0px;
+    }
+}
+
+@keyframes transparent{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes roll{
+    0%{
+        opacity: 0;
+        transform: translate3d(0, -70%, 0);
+    }
+    2.5%, 25%{
+        opacity: 1;
+        transform: translateZ(0);
+    }
+
+    27.5%, 100%{
+        opacity: 0;
+        transform: translate3d(0, -70%, 0);
+    }
+
+}
+
+@keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+  }

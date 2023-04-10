@@ -1,0 +1,123 @@
+{% extends 'core/base.html' %} {% load static %} {% block main %}
+
+<div class="content-skills">
+  <h1 class="title-skills">Skills</h1>
+  <section class="skills">
+    <div class="content-skill">
+      <div class="content-icon">
+        <img
+          class="icon"
+          src="{% static 'core/icon/icon-python.png' %}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>Python</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img
+          class="icon"
+          src="{% static 'core/icon/icon-django.png' %}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>Django</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img
+          class="icon"
+          src="{% static 'core/icon/icon-fastAPI.png' %}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>FastAPI</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img class="icon" src="{% static 'core/icon/icon-html.png' %}" alt="" />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>HTML 5</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img class="icon" src="{% static 'core/icon/icon-css.png' %}" alt="" />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>CSS 3</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img class="icon" src="{% static 'core/icon/icon-js.png' %}" alt="" />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>JavaScript</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img class="icon" src="{% static 'core/icon/icon-bug.png' %}" alt="" />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>Testing</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img
+          class="icon"
+          src="{% static 'core/icon/icon-azure.png' %}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>Claud Azure</strong></p>
+      </div>
+    </div>
+
+    <div class="content-skill">
+      <div class="content-icon">
+        <img
+          class="icon"
+          src="{% static 'core/icon/icon-github.png' %}"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p class="name-skill"><strong>Github</strong></p>
+      </div>
+    </div>
+  </section>
+  <div id="lottie-skills"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+<script>
+  var animationContainer = document.getElementById("lottie-skills");
+  var animation = bodymovin.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "{% static 'core/json/cat_on_pc.json' %}",
+  });
+</script>
+
+{% endblock %}

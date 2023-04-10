@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %} {% load static %} {% block main %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+<div id="lottie-projects"></div>
+
+<script>
+  var animationContainer = document.getElementById("lottie-projects");
+  var animation = bodymovin.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "{% static 'core/json/celular.json' %}",
+  });
+</script>
+{% endblock %}

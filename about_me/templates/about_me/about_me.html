@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %} {% load static %} {% block main %}
+<div class="content-about">
+  <h1 class="title">Sobre mí</h1>
+  <div class="content-about-lottie">
+    <div id="lottie-about"></div>
+    <div class="content-text">
+      <p class="text-about">
+        Hola! mi nombre es Franco, soy desarrollador web Full Stack apasionado por la tecnología
+        y el desarrollo de software. Me he especializado en backend utilizando
+        Python con Django y FastAPI y básico de Node.Js, aunque también tengo
+        conocimiento y practica del lado del front-end con HTML, CSS y
+        JavaScript utilizando React.js.
+      </p>
+
+      <p class="text-about">
+        Soy estudiante del último año de la tecnicatura superior en desarrollo
+        de software, donde he adquirido conocimientos sólidos en
+        programación(BackEnd y FrontEnd), bases de datos SQL, en desarrollo e
+        implementación en la nube, ingeniería de software y otras tecnologías
+        relacionadas con el desarrollo de software.
+      </p>
+
+      <p class="text-about">
+        Además de mi experiencia en programación, tengo conocimientos avanzados
+        en testing manual y automático, lo que me permite asegurar la calidad de
+        los productos que desarrollo. Poseo una certificación en Scrum con la
+        cual aprendí a trabajar de manera ágil y colaborativa en equipos
+        multidisciplinarios.
+      </p>
+
+      <p class="text-about">
+        Me considero un autodidacta, con un pensamiento crítico y creativo, lo
+        que me permite encontrar soluciones innovadoras y eficientes a los
+        problemas que se me presentan.
+      </p>
+
+      <p class="text-about">
+        Estoy comprometido con el éxito de mis proyectos y soy conocido por mi
+        habilidad para trabajar de manera eficiente en entornos de alta presión,
+        entregando soluciones de alta calidad en plazos ajustados.
+      </p>
+
+      <p class="text-about">
+        Si estás buscando un desarrollador web full stack altamente calificado,
+        ¡no dudes en contactarme! Estoy ansioso por trabajar en proyectos
+        emocionantes y desafiantes.
+      </p>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+<script>
+  var animationContainer = document.getElementById("lottie-about");
+  var animation = bodymovin.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "{% static 'core/json/laptop2.json' %}",
+  });
+</script>
+
+{% endblock %}

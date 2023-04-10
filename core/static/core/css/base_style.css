@@ -1,0 +1,130 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    
+}
+
+/***** HEADER *****/
+header {
+
+    background-color: #0b002d;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+
+.nav{
+    max-width: 35%;
+    min-width: 5%;
+    position: absolute;
+    margin-right:50px;
+    right: 0;
+    
+}
+
+.nav a{
+    width: 50%;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.nav li{
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline;
+    margin: 0 0 0 15px;
+    
+}
+
+nav a:hover{
+    color: rgb(172, 18, 149);
+}
+
+.logo{
+    width: 400px;
+    min-width: 5%;
+    max-width:35%;
+    margin-left: 20px;
+    opacity: 2;
+    
+}
+
+/***** MAIN *****/
+video{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.3;
+}
+.capa{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 1;
+    mix-blend-mode:soft-light;
+    z-index: -1;
+}
+
+
+main{
+    margin-top: 98px;
+    height: 100%;
+}
+main img{
+    width: 50px;
+}
+
+/***** FOOTER *****/
+.footer{
+    margin-top: 5px;
+    background: #16001c;
+    margin-top: auto ;
+    opacity: 0.85;
+}
+
+.logos_network{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 5px;
+}
+
+.footer a{   
+    text-decoration: none;  
+    border: radius 100px;  
+}
+
+.logo_git{
+    width: 35px;
+}
+
+.logo_linkedin{
+    width: 32px;
+}
+
+.copyright{
+    color:white;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 8px;    
+}

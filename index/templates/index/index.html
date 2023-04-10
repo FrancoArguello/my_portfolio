@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %} {% load static %} {% block main %}
+<div class="content-index">
+  <div class="I-am">
+    <p class="my_name">mi nombre es:</p>
+    <div class="content-name-function">
+      <h1 class="name">Franco Argüello</h1>
+      <h2 class="function">
+        <div class="items">Full Stack Developer</div>
+        <div class="items">Software Developer</div>
+        <div class="items">Back end</div>
+        <div class="items">Data Base</div>
+      </h2>
+    </div>
+    <div id="lottie-index"></div>
+  </div>
+  <img
+    id="photo"
+    class="show"
+    src="{% static 'core/img/user-img.jpg' %}"
+    alt=""
+  />
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+<script>
+  var animationContainer = document.getElementById("lottie-index");
+  var animation = bodymovin.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "{% static 'core/json/laptop.json' %}",
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,111 @@
+.content-skills{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-skills{
+    animation: animation 2s steps(35), transparent .3s step-end infinite alternate;
+    width: 2.7em;
+    white-space: nowrap;
+    overflow: hidden ;
+    font-size: 3em;
+    color: #c9bcf3;
+    border-right: 5px solid #5d075d ;
+    margin-bottom: 25px;
+}
+.skills{
+    width: 80%;
+    animation: aparecer 1s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; 
+    align-items: center;
+    
+}
+
+.content-skill{
+    width:250px;
+    background-color: #220579;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin: 3px 0 4px 0;
+    transition: background-color 0.5s ease;
+    box-shadow: 3px 3px 5px 0 #7ad0f54d
+    }
+
+
+
+.content-skill:hover{
+
+    background-color: #450357;
+    box-shadow: 3px 3px 5px 0 #c555e4;
+    transition: background-color  0.5s ease, box-shadow  0.5s ease;
+    
+}
+
+
+.content-icon{
+    background-color: #c9bcf3;
+    border-radius: 500px;
+    padding-top: 2.5px;
+    margin: 3px;
+    padding:10px 13px;
+    
+}
+
+.content-skill:hover .content-icon {
+    background-color: #dca8eb;
+    transition: background-color  0.5s ease,
+}
+
+
+.icon{
+    width: 30px;
+    margin-top: 3px;      
+}
+
+
+.name-skill{
+    color: #c9bcf3;
+    margin-left: 7px;
+    font-size:1.3em;
+}
+
+.content-skill:hover .name-skill {
+    color: #dca8eb;
+    transition: color  0.5s ease,
+}
+
+
+#lottie-skills{
+    margin-top: 30px;
+    margin-bottom: 2px;
+    width:427px;
+}
+
+
+@keyframes animation{
+    from {
+        width:0px;
+    }
+}
+
+@keyframes transparent{
+    50%{
+        border-color: transparent;
+    }
+}
+
+
+
+@keyframes aparecer {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+  }

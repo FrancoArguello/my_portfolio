@@ -1,0 +1,52 @@
+
+.title{
+    animation: animation 2s steps(35), transparent .3s step-end infinite alternate;
+    width: 4.2em;
+    white-space: nowrap;
+    overflow: hidden ;
+    font-size: 4em;
+    color: #c9bcf3;
+    border-right: 5px solid #5d075d ;
+    margin: 4px 0 25px 40px;
+}
+
+.content-about-lottie{
+    color: #c9bcf3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+#lottie-about{
+    width: 25%; 
+}
+
+.content-text{
+    justify-content: center;
+    width: 60%;
+    margin-left: 50px;
+    max-height: 400px;
+}
+
+.text-about{
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.2;
+    margin-top: 10px;
+    
+}
+
+
+
+@keyframes animation{
+    from {
+        width:0px;
+    }
+}
+
+@keyframes transparent{
+    50%{
+        border-color: transparent;
+    }
+}

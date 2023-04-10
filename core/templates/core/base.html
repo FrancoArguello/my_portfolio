@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <title>Portafolio - Franco Argüello</title>
+    <link rel="stylesheet" href="{% static 'core/css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/base_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/projects.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/about.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/skills.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/contact.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <a href="{% url 'index' %}">
+        <img
+          class="logo"
+          src="{% static 'core/img/logo-azul-violeta.png' %}"
+          alt="logo"
+        />
+      </a>
+      <nav class="nav">
+        <ul>
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{%  url 'about' %}">Sobre mí</a></li>
+          <li><a href="{%  url 'skills' %}">Skills</a></li>
+          <li><a href="{%  url 'projects' %}">Proyectos</a></li>
+          <li><a href="{%  url 'contact' %}">Contacto</a></li>
+          <li>
+            <a
+              href="{% static 'core/pdf/Cv_Franco_ARGÜELLO.pdf' %}"
+              download="cv_Franco_Argüello.pdf"
+              >CV</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <video
+        muted
+        autoplay
+        loop
+        src="{% static 'core/videos/fondo.mp4' %}"
+        type="video/mp4"
+      ></video>
+      <div class="capa"></div>
+
+      {% block main %} {% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="footer_conteiner">
+        <div class="logos_network">
+          <a href="https://github.com/FrancoArguello" target="_blank"
+            ><img
+              class="logo_git"
+              src="{% static 'core/img/logo-git.png' %}"
+              alt="logo_de_git"
+          /></a>
+          <a href="https://www.linkedin.com/in/franco-arguello/" target="_blank"
+            ><img
+              class="logo_linkedin"
+              src="{% static 'core/img/logo-linkedin.png' %}"
+              alt="logo_de_linkedin"
+          /></a>
+        </div>
+        <p class="copyright">
+          Copyright &copy; 2023 · Franco Argüello (FullStack developer)
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
